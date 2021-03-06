@@ -6,16 +6,12 @@ def rename_file(file_path):
 	for file in os.listdir():
 		i+=1
 		filename, fileext = os.path.splitext(file)
-
+		fileext = fileext.lower()
 		if fileext == ".jpg": 
 			fileext = ".png"
 		elif fileext == ".jpeg":
 			fileext = ".png"
-		elif fileext == ".JPG":
-			fileext = ".png"
-		elif fileext == ".JPEG":
-			fileext = ".png"
-
+			
 		else:
 			continue
 			
